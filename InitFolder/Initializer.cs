@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IDF_Operation.init
+namespace IDF_Operation.InitFolder.initializer
 {
     internal class Initializer
     {

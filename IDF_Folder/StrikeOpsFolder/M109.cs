@@ -1,20 +1,22 @@
-namespace IDF_Operation
+using IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops;
+
+
+namespace IDF_Operation.IDF_Folder.StrikeOpsFolder.m109
 {
-    class Zik : StrikeOptions
+     internal class M109 : StrikeOptions
     {
-        public Zik(
+        public M109(
             string name,
             Dictionary<string, int> ammunitionAmount,
             int fuelSupply,
             string typeTarget) : base(
-                "Zik 460",
+                "M109",
                 new Dictionary<string, int>
                 {
-                    { "personnel", 1 },
-                    { "armored vehicles", 2 }
+                    { "shell", 40 }
                 },
                 fuelSupply,
-                "people, vehicles")
+                "open areas")
         { }
     }
 }
