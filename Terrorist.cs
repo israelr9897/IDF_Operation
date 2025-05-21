@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace IDF_Operation.terrorist
 {
@@ -14,12 +15,24 @@ namespace IDF_Operation.terrorist
         public List<string> Weapons { get;}
 
 
-        public Terrorist(string name, int rank, string status, List<string> weapons) 
+        public Terrorist(string name, int rank, List<string> weapons) 
         {
             Name = name; 
             Rank = rank; 
-            Status = status; 
+            Status = "alive"; 
             Weapons = weapons;
+        }
+
+        public void Killed()
+        {
+            Status = "dead";
+        }
+
+        public void Print()
+        {
+            string weaponsSTR = "";
+            foreach (var weapon in Weapons) { weaponsSTR += weapon; };
+            Console.WriteLine($"Terrorist,\nName: {Name},\nRank: {Rank},\nStatus: {Status},\nWeapons: {weaponsSTR}.\n");
         }
     }
 }
