@@ -30,8 +30,8 @@ namespace IDF_Operation.Models
 
         public void Print()
         {
-            string weaponsSTR = "";
-            foreach (var weapon in Weapons) { weaponsSTR += weapon; };
+            string weaponsSTR = String.Join(",", Weapons);
+            //foreach (var weapon in Weapons) { weaponsSTR += weapon + " "; };
             Console.WriteLine($"Terrorist,\nName: {Name},\nRank: {Rank},\nStatus: {Status},\nWeapons: {weaponsSTR}.\n");
         }
     }
