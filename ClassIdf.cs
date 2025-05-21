@@ -1,12 +1,9 @@
 namespace IDF_Operation
 {
-    internal class Idf
+    static internal class Idf
     {
-        public string DateOfEstablishment = "01/05/1948";
-        public string CurrentCommander = "Eyal Zamir";
-        public List<object> StrikeOptions;
-
-        
-
+        public static  string DateOfEstablishment = "01/05/1948";
+        public static string CurrentCommander = "Eyal Zamir";
+        public static List<StrikeOptions> StrikeOptions = new List<StrikeOptions>();
     }
 }
