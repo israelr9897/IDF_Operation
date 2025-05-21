@@ -3,20 +3,20 @@ using IDF_Operation.Models;
 
 namespace IDF_Operation.Models
 {
-     internal class M109 : StrikeOptions
+    internal class M109 : StrikeOptions
     {
-        public M109(
-            string name,
-            Dictionary<string, int> ammunitionAmount,
-            int fuelSupply,
-            string typeTarget) : base(
+        public M109(int fuelSupply) : base(
                 "M109",
-                new Dictionary<string, int>
-                {
-                    { "shell", 40 }
-                },
                 fuelSupply,
                 "open areas")
         { }
+        
+        public override Dictionary<string, int> AmmunitionRefill()
+        {
+            return new Dictionary<string, int>
+                {
+                    { "shell", 40 }
+                };
+        }
     }
 }
