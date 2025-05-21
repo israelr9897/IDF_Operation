@@ -1,4 +1,6 @@
-namespace IDF_Operation
+using IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops;
+
+namespace IDF_Operation.IDF_Folder.StrikeOpsFolder.f16
 {
     class F16 : StrikeOptions
     {
@@ -18,7 +20,7 @@ namespace IDF_Operation
                 fuelSupply,
                 "Buildings")
         {
-            this.PilotName = pilotName;
+            PilotName = pilotName;
         }
     }
 }

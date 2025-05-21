@@ -1,4 +1,4 @@
-namespace IDF_Operation
+namespace IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops
 {
     internal class StrikeOptions
     {
@@ -9,10 +9,10 @@ namespace IDF_Operation
 
         public StrikeOptions(string name, Dictionary<string, int> ammunitionAmount, int fuelSupply, string targetType)
         {
-            this.Name = name;
-            this.AmmunitionAmount = ammunitionAmount;
-            this.FuelSupply = fuelSupply;
-            this.TargetType = targetType;
+            Name = name;
+            AmmunitionAmount = ammunitionAmount;
+            FuelSupply = fuelSupply;
+            TargetType = targetType;
         }
 
     }

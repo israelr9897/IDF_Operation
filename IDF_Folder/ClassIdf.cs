@@ -1,4 +1,6 @@
-namespace IDF_Operation
+using IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops;
+
+namespace IDF_Operation.IDF_Folder.idf
 {
     static internal class Idf
     {
