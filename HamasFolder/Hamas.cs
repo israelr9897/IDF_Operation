@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IDF_Operation.HamasFolder.terrorist;
+using IDF_Operation.Models;
 
-namespace IDF_Operation.HamasFolder.hamas
+namespace IDF_Operation.Models
 {
     internal static class Hamas
     {

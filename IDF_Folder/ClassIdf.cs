@@ -1,6 +1,6 @@
-using IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops;
+using IDF_Operation.Models;
 
-namespace IDF_Operation.IDF_Folder.idf
+namespace IDF_Operation.Models
 {
     static internal class Idf
     {

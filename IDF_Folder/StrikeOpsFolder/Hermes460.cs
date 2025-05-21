@@ -1,9 +1,9 @@
-using IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops;
+using IDF_Operation.Models;
 
 
-namespace IDF_Operation.IDF_Folder.StrikeOpsFolder.zik
+namespace IDF_Operation.Models
 {
-    class Zik : StrikeOptions
+    internal class Zik : StrikeOptions
     {
         public Zik(
             string name,
