@@ -1,10 +1,9 @@
-﻿namespace IDF_Operation.Models
+﻿namespace ls
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
         }
     }
 
