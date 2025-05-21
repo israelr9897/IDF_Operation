@@ -5,18 +5,22 @@ namespace IDF_Operation.Models
     internal class F16 : StrikeOptions
     {
         public string PilotName { get; }
-        public F16(
-            "F16",
-                StrikeOptions.AmmunitionRefill(name),
-                fuelSupply,
-                "Buildings",
+        public F16(int fuelSupply,
             string pilotName) : base(
                 "F16",
-                StrikeOptions.AmmunitionRefill(name),
                 fuelSupply,
                 "Buildings")
         {
             PilotName = pilotName;
+        }
+
+        public override Dictionary<string, int> AmmunitionRefill()
+        {
+            return new Dictionary<string, int>
+                {
+                    { "0.5", 4 },
+                    { "1", 4 }
+                };
         }
     }
 }
