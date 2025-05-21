@@ -3,7 +3,7 @@ using IDF_Operation.Models;
 
 namespace IDF_Operation.Models
 {
-    class Zik : StrikeOptions
+    internal class Zik : StrikeOptions
     {
         public Zik(
             string name,

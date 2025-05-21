@@ -1,4 +1,4 @@
-﻿using IDF_Operation.Models;
+using IDF_Operation.Models;
 
 namespace IDF_Operation
 {
@@ -6,7 +6,6 @@ namespace IDF_Operation
     {
         static void Main(string[] args) {
             Initializer initializer = new Initializer();
-
         }
     }
 
