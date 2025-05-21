@@ -11,59 +11,33 @@ namespace IDF_Operation.Models
 {
     internal class InitReports
     {
-        
-        //public static string[] FirstName = new string[]
-        //{
-        //    "Mohammad", "Ahmad", "Yousef", "Omar", "Ali",
-        //    "Lina", "Rania", "Mariam", "Nour", "Dina"
-        //};
-        //public static string[] MiddleName = new string[]
-        //{
-        //    "Ibrahim", "Khalil", "Issa", "Mahmoud", "Fadi",
-        //    "Nabil", "Suleiman", "Tariq", "Hassan", "Rashid"
-        //};
-        //public static string[] LastName = new string[]
-        //{
-        //    "Al-Tamimi", "Barghouti", "Nashashibi", "Abu Sneineh", "Awad",
-        //    "Dweik", "Hijazi", "Sabbagh", "Salameh", "Zayyad"
-        //};
-        //public static string[] WeaponsTypes = new string[] { "knife", "gun", "M16", "AK47"};
-        //private Random random = new Random();
+        public static string[] LocationTypes = { "home", "car", "outside" };
+        private Random random = new Random();
 
-        //public InitReports(int amount) 
-        //{
-        //    for (int i = 0; i < amount; i++)
-        //    {
-        //        Hamas.Terrorists.Add(new Terrorist(
-        //            GenerateName(),
-        //            random.Next(1, 6),
-        //            GenerateWeapons())
-        //            );
-        //    }
-        //}
-        
-        //private string GenerateName() 
-        //{
-        //    string name = "";
-        //    name += FirstName[random.Next(10)] + " ";
-        //    name += MiddleName[random.Next(10)] + " ";
-        //    name += LastName[random.Next(10)];
-        //    return name;
-        //}
 
-        //private List<string> GenerateWeapons()
-        //{
-        //    List<string> weapons = new List<string>();
-        //    int amount = random.Next(1,4);
-        //    for (int i = 0; i < amount; i++)
-        //    {
-        //        int type = random.Next(4);
-        //        if (weapons.Contains(WeaponsTypes[type])){
-        //            continue;
-        //        }
-        //        weapons.Add(WeaponsTypes[type]);
-        //    }
-        //    return weapons;
-        //}
+        public InitReports()
+        {
+            foreach (Terrorist t in Hamas.Terrorists)
+            {
+                int amountReports = random.Next(10);
+                for (int i = 0; i < amountReports; i++)
+                {
+                    Aman.ReportList.Add(new IntelReport(
+                        t, 
+                        LocationTypes[random.Next(4)], 
+                        GenerateTimestamp()));
+                }
+
+            }
+
+        }
+
+        private DateTime GenerateTimestamp()
+        {
+            DateTime start = new DateTime(1995, 1, 1);
+            int range = (DateTime.Today - start).Days;
+            //DateTime timestamp = start.AddDays(random.Next(range));
+            return start.AddDays(random.Next(range)).AddHours(random.Next(0, 24)).AddMinutes(random.Next(0, 60)).AddSeconds(random.Next(0, 60));
+        }
     }
 }

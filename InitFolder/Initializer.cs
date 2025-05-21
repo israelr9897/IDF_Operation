@@ -10,6 +10,7 @@ namespace IDF_Operation.Models
     internal class Initializer
     {
         private InitTerrorists terrorists;
+        private InitReports reports;
 
         public Initializer()
         {
@@ -24,7 +25,13 @@ namespace IDF_Operation.Models
                 item.Print();
             }
 
-        //Initialize Intel Reports
+            //Initialize Intel Reports
+            reports = new InitReports();
+            foreach (IntelReport item in Aman.ReportList)
+            {
+                item.Print();
+            }
+
         }
     }
 }
