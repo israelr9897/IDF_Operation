@@ -3,9 +3,9 @@ namespace IDF_Operation.Models
 {
     interface IFuelAndAmmunition
     {
-        void FuelFilling(StrikeOptions obj,int fuelAmount);
-        void FuelUsing(StrikeOptions obj, int ammountFuel);
-        void AmmunitionUsing(StrikeOptions obj, string ammunitionType);
+        void FuelFilling(int fuelAmount);
+        void FuelUsing(int ammountFuel);
+        void AmmunitionUsing(string ammunitionType);
         abstract Dictionary<string, int> AmmunitionRefill();
     }
 }
