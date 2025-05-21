@@ -1,6 +1,6 @@
-using IDF_Operation.terrorist;
+using IDF_Operation.HamasFolder.terrorist;
 
-namespace IDF_Operation
+namespace IDF_Operation.IDF_Folder.AmanFolder.intelReport
 {
     internal class IntelReport
     {
