@@ -1,6 +1,5 @@
-using IDF_Operation.HamasFolder.terrorist;
 
-namespace IDF_Operation.AmanFolder.intelReport
+namespace IDF_Operation.Models
 {
     internal class IntelReport
     {
@@ -8,7 +7,7 @@ namespace IDF_Operation.AmanFolder.intelReport
         public string Location;
         public string TimeStamp;
 
-        internal IntelReport(Terrorist nameTerroist, string location, string timeStamp)
+        public IntelReport(Terrorist nameTerroist, string location, string timeStamp)
         {
             this.NameTerroist = nameTerroist;
             this.Location = location;

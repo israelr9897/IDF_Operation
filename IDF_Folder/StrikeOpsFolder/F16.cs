@@ -1,8 +1,8 @@
-using IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops;
+using IDF_Operation.Models;
 
-namespace IDF_Operation.IDF_Folder.StrikeOpsFolder.f16
+namespace IDF_Operation.Models
 {
-    class F16 : StrikeOptions
+    internal class F16 : StrikeOptions
     {
         public string PilotName { get; }
         public F16(

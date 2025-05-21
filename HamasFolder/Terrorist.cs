@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace IDF_Operation.HamasFolder.terrorist
+namespace IDF_Operation.Models
 {
     internal class Terrorist
     {

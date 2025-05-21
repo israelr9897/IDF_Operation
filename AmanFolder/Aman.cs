@@ -1,7 +1,7 @@
-using IDF_Operation.AmanFolder.intelReport;
-namespace IDF_Operation.AmanFolder.aman
+using IDF_Operation.Models;
+namespace IDF_Operation.Models
 {
-    class Aman
+    internal class Aman
     {
         public List<IntelReport> ReportList = new List<IntelReport>();
     }
