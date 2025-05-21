@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace IDF_Operation.HamasFolder.terrorist
+namespace IDF_Operation.Models
 {
     internal class Terrorist
     {
@@ -30,8 +30,8 @@ namespace IDF_Operation.HamasFolder.terrorist
 
         public void Print()
         {
-            string weaponsSTR = "";
-            foreach (var weapon in Weapons) { weaponsSTR += weapon; };
+            string weaponsSTR = String.Join(",", Weapons);
+            //foreach (var weapon in Weapons) { weaponsSTR += weapon + " "; };
             Console.WriteLine($"Terrorist,\nName: {Name},\nRank: {Rank},\nStatus: {Status},\nWeapons: {weaponsSTR}.\n");
         }
     }

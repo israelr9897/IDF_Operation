@@ -1,7 +1,5 @@
-﻿using IDF_Operation.HamasFolder.terrorist;
-using IDF_Operation.HamasFolder.hamas;
+﻿using IDF_Operation.Models;
 
-using IDF_Operation.IDF_Folder.StrikeOpsFolder.f16;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 
-namespace IDF_Operation.InitFolder.init_terrorists
+namespace IDF_Operation.Models
 {
     internal class InitTerrorists
     {
@@ -29,32 +27,21 @@ namespace IDF_Operation.InitFolder.init_terrorists
             "Al-Tamimi", "Barghouti", "Nashashibi", "Abu Sneineh", "Awad",
             "Dweik", "Hijazi", "Sabbagh", "Salameh", "Zayyad"
         };
-        public static string[] WeaponsTypes = new string[] { "knife", "gun", "M16", "AK47" };
+        public static string[] WeaponsTypes = new string[] { "knife", "gun", "M16", "AK47"};
         private Random random = new Random();
 
         public InitTerrorists(int amount) 
         {
             for (int i = 0; i < amount; i++)
             {
-                Hamas.Terrorists.Add(new Terrorist(GenerateName(),
+                Hamas.Terrorists.Add(new Terrorist(
+                    GenerateName(),
                     random.Next(1, 6),
                     GenerateWeapons())
                     );
             }
         }
-        public List<Terrorist>  Init(int amount) {
-            List<Terrorist> Terrorists = new List<Terrorist>();
-
-            for (int i = 0; i < amount; i++)
-            {
-                    Terrorists.Add(
-                    new Terrorist(GenerateName(), 
-                    random.Next(1,6), 
-                    GenerateWeapons())
-                    );
-            }
-            return Terrorists;
-        }
+        
         private string GenerateName() 
         {
             string name = "";
@@ -67,10 +54,13 @@ namespace IDF_Operation.InitFolder.init_terrorists
         private List<string> GenerateWeapons()
         {
             List<string> weapons = new List<string>();
-            int amount = random.Next(4);
+            int amount = random.Next(1,4);
             for (int i = 0; i < amount; i++)
             {
                 int type = random.Next(4);
+                if (weapons.Contains(WeaponsTypes[type])){
+                    continue;
+                }
                 weapons.Add(WeaponsTypes[type]);
             }
             return weapons;

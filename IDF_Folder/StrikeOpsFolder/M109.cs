@@ -1,7 +1,7 @@
-using IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops;
+using IDF_Operation.Models;
 
 
-namespace IDF_Operation.IDF_Folder.StrikeOpsFolder.m109
+namespace IDF_Operation.Models
 {
      internal class M109 : StrikeOptions
     {

@@ -1,4 +1,4 @@
-namespace IDF_Operation.IDF_Folder.StrikeOpsFolder.strike_ops
+namespace IDF_Operation.Models
 {
     internal class StrikeOptions
     {
