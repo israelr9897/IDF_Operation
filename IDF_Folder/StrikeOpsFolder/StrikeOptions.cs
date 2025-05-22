@@ -22,9 +22,9 @@ namespace IDF_Operation.Models
         {
             FuelSupply = fuelAmount;
         }
-        public void FuelUsing(int ammountFuel)
+        public void FuelUsing(int amountFuel)
         {
-            FuelSupply -= ammountFuel;
+            FuelSupply -= amountFuel;
         }
         public void AmmunitionUsing(string ammunitionType)
         {
@@ -32,7 +32,7 @@ namespace IDF_Operation.Models
         }
         public abstract Dictionary<string, int> AmmunitionRefill();
 
-        public void DataPriting()
+        public void DataPrinting()
         {
             System.Console.WriteLine($"ID: {Id}\n" +
                                     $"Type of attack vehicle - {Name}\n" +

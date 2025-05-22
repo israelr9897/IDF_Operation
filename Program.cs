@@ -13,6 +13,8 @@ namespace IDF_Operation
             // Aman.InitDict();
             InitWeapons s = new InitWeapons(2);
             Idf.StrikeOptionsListPrint();
+          
+            //Initializer init = new Initializer();
         }
     }
 

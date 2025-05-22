@@ -4,7 +4,7 @@ namespace IDF_Operation.Models
     static internal class Aman
     {
         static public List<IntelReport> ReportList = new List<IntelReport>();
-
+      
         static internal List<Dictionary<Terrorist, int>> SortedNumberReports()
         {
             List<Dictionary<Terrorist, int>> SortedNumberReportsList = new List<Dictionary<Terrorist, int>>();
@@ -68,6 +68,13 @@ namespace IDF_Operation.Models
             return reportLoistByTerroist;
         }
         
+        static public List<IntelReport> SortReportsByDate(List<IntelReport> UnSorted)
+        {
+            return UnSorted.OrderBy(report => report.TimeStamp).ToList();
+        }
 
     }
+
+    
+
 }
