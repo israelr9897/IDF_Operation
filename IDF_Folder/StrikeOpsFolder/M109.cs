@@ -7,6 +7,7 @@ namespace IDF_Operation.Models
     {
         public M109(int fuelSupply) : base(
                 "M109",
+                Idf.StrikeOptionsList.Count +1,
                 fuelSupply,
                 "open areas")
         { }

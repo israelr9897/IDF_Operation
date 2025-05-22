@@ -8,6 +8,7 @@ namespace IDF_Operation.Models
         public F16(int fuelSupply,
             string pilotName) : base(
                 "F16",
+                Idf.StrikeOptionsList.Count +1,
                 fuelSupply,
                 "Buildings")
         {

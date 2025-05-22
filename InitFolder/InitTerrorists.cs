@@ -36,6 +36,7 @@ namespace IDF_Operation.Models
             {
                 Hamas.Terrorists.Add(new Terrorist(
                     GenerateName(),
+                    Hamas.Terrorists.Count + 1,
                     random.Next(1, 6),
                     GenerateWeapons())
                     );
