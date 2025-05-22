@@ -6,7 +6,7 @@ namespace IDF_Operation
     {
         static void Main(string[] args)
         {
-        
+            //Initializer init = new Initializer();
         }
     }
 

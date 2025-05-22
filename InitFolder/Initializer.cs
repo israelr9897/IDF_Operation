@@ -27,6 +27,8 @@ namespace IDF_Operation.Models
 
             //Initialize Intel Reports
             reports = new InitReports(10);
+            Aman.ReportList = Aman.SortReportsByDate(Aman.ReportList);
+            Console.WriteLine("Sorted");
             foreach (IntelReport item in Aman.ReportList)
             {
                 item.Print();
