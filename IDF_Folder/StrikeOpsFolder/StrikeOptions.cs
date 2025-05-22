@@ -43,12 +43,23 @@ namespace IDF_Operation.Models
 
         public string DictPrint()
         {
-            string messge = "";
+            string amount = "";
             foreach (var item in AmmunitionAmount)
             {
-                messge += item.Key + " : " + item.Value + "     ";
+                amount += item.Key + " : " + item.Value + "     ";
             }
-            return messge;
+            return amount;
+        }
+
+        public static void SearchWeapon(int id)
+        {
+            foreach (var weapon in Idf.StrikeOptionsList)
+            {
+                if (weapon.Id == id)
+                {
+                    weapon.DataPrinting();
+                }
+            }
         }
 
     }

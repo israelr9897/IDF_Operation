@@ -6,15 +6,24 @@ namespace IDF_Operation.Models
     {
         static void Main(string[] args)
         {
-            // InitTerrorists t = new InitTerrorists(5);
-            // InitReports v = new InitReports(5);
-            // Aman.ReportPrint();
-            // Aman.SortedNumberReports();
-            // Aman.InitDict();
-            InitWeapons s = new InitWeapons(2);
+            InitTerrorists t = new InitTerrorists(5);
+            InitReports v = new InitReports(5);
+            InitWeapons w = new InitWeapons(2);
             Idf.StrikeOptionsListPrint();
-
-            //Initializer init = new Initializer();
+            StrikeOptions.SearchWeapon(1);
+            // SortReport.SortReportsByDate();
+            // Hamas.TerroristsListPrint();
+            // System.Console.WriteLine("\n\n\n");
+            // SearchTerroist.SearchTerroistById(2);
+            // SearchTerroist.SearchTerrMostDanger();
+            // SearchTerroist.SearchTerrMostReports();
+            // MenuTerroists.UserChoice();
+            // Aman.ReportListPrint();
+            // System.Console.WriteLine(Hamas.Terrorists);
         }
     }
 }
+            // Aman.SortedNumberReports();
+            // Aman.InitDict();
+            // InitWeapons s = new InitWeapons(2);
+            // Idf.StrikeOptionsListPrint();

@@ -13,5 +13,14 @@ namespace IDF_Operation.Models
         public static string Commander = "Mohammed Sinwar";
         public static List<Terrorist> Terrorists = new List<Terrorist>();
 
+
+        public static void TerroristsListPrint()
+        {
+            foreach (var terroist in Terrorists)
+            {
+                terroist.Print();
+            }
+            // System.Console.WriteLine("YES");
+        }
     }
 }
