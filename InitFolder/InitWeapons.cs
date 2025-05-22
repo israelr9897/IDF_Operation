@@ -1,10 +1,10 @@
 namespace IDF_Operation.Models
 {
-    class InitWeapon
+    class InitWeapons
     {
         // private StrikeOptions[] WeaponList = { StrikeOptions, Zik, M109 };
         // private Random random = new Random()
-        private InitWeapon(int amount)
+        public InitWeapons(int amount)
         {
             for (int i = 0; i < amount; i++)
             {

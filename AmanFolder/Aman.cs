@@ -49,5 +49,25 @@ namespace IDF_Operation.Models
             }
             return reportAmout;
         }
+
+        internal static List<Terrorist> SortingByRisk(List<Terrorist> ansorted)
+        {
+            return ansorted.OrderBy(terroist => terroist.LevelRisk).ToList();
+        }
+
+        internal static List<IntelReport> SearchReportByTerroist(int id)
+        {
+            List<IntelReport> reportLoistByTerroist = new List<IntelReport>();
+            foreach (var report in Aman.ReportList)
+            {
+                if (report.TerroristName.Id == id)
+                {
+                    reportLoistByTerroist.Add(report);
+                }
+            }
+            return reportLoistByTerroist;
+        }
+        
+
     }
 }
