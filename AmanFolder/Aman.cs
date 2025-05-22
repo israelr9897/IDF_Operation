@@ -50,6 +50,4 @@ namespace IDF_Operation.Models
             return reportAmout;
         }
     }
-
-
 }

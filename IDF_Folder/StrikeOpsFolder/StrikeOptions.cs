@@ -4,13 +4,15 @@ namespace IDF_Operation.Models
     public abstract class StrikeOptions : IFuelAndAmmunition
     {
         public string Name { get; }
+        public int Id { get; }
         public Dictionary<string, int> AmmunitionAmount;
         public int FuelSupply { get; set; }
         public string TargetType { get; }
 
-        public StrikeOptions(string name, int fuelSupply, string targetType)
+        public StrikeOptions(string name, int id, int fuelSupply, string targetType)
         {
             Name = name;
+            Id = id;
             AmmunitionAmount = AmmunitionRefill();
             FuelSupply = fuelSupply;
             TargetType = targetType;

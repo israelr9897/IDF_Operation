@@ -10,14 +10,16 @@ namespace IDF_Operation.Models
     internal class Terrorist
     {
         public string Name { get;}
+        public int Id { get; }
         public int Rank { get; }
         public string Status { get; set; }
         public List<string> Weapons { get;}
 
 
-        public Terrorist(string name, int rank, List<string> weapons) 
+        public Terrorist(string name, int id, int rank, List<string> weapons) 
         {
-            Name = name; 
+            Name = name;
+            Id = id;
             Rank = rank; 
             Status = "alive"; 
             Weapons = weapons;
@@ -32,7 +34,7 @@ namespace IDF_Operation.Models
         {
             string weaponsSTR = String.Join(",", Weapons);
             //foreach (var weapon in Weapons) { weaponsSTR += weapon + " "; };
-            Console.WriteLine($"Terrorist,\nName: {Name},\nRank: {Rank},\nStatus: {Status},\nWeapons: {weaponsSTR}.\n");
+            Console.WriteLine($"Terrorist,\nName: {Name},\nId: {Id}\nRank: {Rank},\nStatus: {Status},\nWeapons: {weaponsSTR}.\n");
         }
     }
 }
