@@ -4,8 +4,9 @@ namespace IDF_Operation
 {
     class Program
     {
-        static void Main(string[] args) {
-            Initializer initializer = new Initializer();
+        static void Main(string[] args)
+        {
+        
         }
     }
 
