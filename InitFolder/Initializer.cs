@@ -26,7 +26,7 @@ namespace IDF_Operation.Models
             }
 
             //Initialize Intel Reports
-            reports = new InitReports();
+            reports = new InitReports(10);
             foreach (IntelReport item in Aman.ReportList)
             {
                 item.Print();

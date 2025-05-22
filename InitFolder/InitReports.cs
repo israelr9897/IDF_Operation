@@ -15,16 +15,16 @@ namespace IDF_Operation.Models
         private Random random = new Random();
 
 
-        public InitReports()
+        public InitReports(int amount)
         {
             foreach (Terrorist t in Hamas.Terrorists)
             {
-                int amountReports = random.Next(10);
+                int amountReports = random.Next(amount);
                 for (int i = 0; i < amountReports; i++)
                 {
                     Aman.ReportList.Add(new IntelReport(
                         t, 
-                        LocationTypes[random.Next(4)], 
+                        LocationTypes[random.Next(3)], 
                         GenerateTimestamp()));
                 }
 
@@ -34,7 +34,7 @@ namespace IDF_Operation.Models
 
         private DateTime GenerateTimestamp()
         {
-            DateTime start = new DateTime(1995, 1, 1);
+            DateTime start = new DateTime(2025, 1, 1);
             int range = (DateTime.Today - start).Days;
             //DateTime timestamp = start.AddDays(random.Next(range));
             return start.AddDays(random.Next(range)).AddHours(random.Next(0, 24)).AddMinutes(random.Next(0, 60)).AddSeconds(random.Next(0, 60));
