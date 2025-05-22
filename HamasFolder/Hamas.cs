@@ -12,5 +12,6 @@ namespace IDF_Operation.Models
         public static string DateOfFormation = "1991";
         public static string Commander = "Mohammed Sinwar";
         public static List<Terrorist> Terrorists = new List<Terrorist>();
+
     }
 }
