@@ -1,6 +1,6 @@
 using IDF_Operation.Models;
 
-namespace IDF_Operation
+namespace IDF_Operation.Models
 {
     class Program
     {
@@ -13,9 +13,8 @@ namespace IDF_Operation
             // Aman.InitDict();
             InitWeapons s = new InitWeapons(2);
             Idf.StrikeOptionsListPrint();
-          
+
             //Initializer init = new Initializer();
         }
     }
-
 }
