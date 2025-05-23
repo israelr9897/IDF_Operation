@@ -2,14 +2,9 @@ namespace IDF_Operation.Models
 {
     static class SortReport
     {
-
-        static public void SortReportsByDate()
+        static public List<IntelReport> SortReportsByDate()
         {
-
-            foreach (var report in Aman.ReportList.OrderBy(report => report.TimeStamp).ToList())
-            {
-                report.Print();
-            }
+            return Aman.ReportList.OrderBy(report => report.TimeStamp).ToList();
         }
     }
 }

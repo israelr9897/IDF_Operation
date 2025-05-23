@@ -1,42 +1,46 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace IDF_Operation.Models
 {
-    static class SearchTerroist
+    static class SearchTerroist 
     {
-        public static void SearchTerroistById(int id)
+        public static Terrorist SearchTerroistById(int id)
         {
             foreach (var terroist in Hamas.Terrorists)
             {
                 if (terroist.Id == id)
                 {
-                    terroist.Print();
+                    return terroist;
                 }
             }
+            return null;
         }
 
-        public static void SearchTerrMostDanger()
+        public static List<Terrorist> SearchTerrMostDanger()
         {
+            List<Terrorist> DangerousTerr = new List<Terrorist>();
             foreach (var terroist in Hamas.Terrorists)
             {
                 if (terroist.LevelRisk == AuxiliaryFunTerr.SearchMaxLevelRisk())
                 {
-                    terroist.Print();
-                    System.Console.WriteLine("The level of danger is: " + terroist.LevelRisk);
-
+                    DangerousTerr.Add(terroist);
                 }
             }
+            return DangerousTerr;
         }
 
-        public static void SearchTerrMostReports()
+        public static List<Terrorist> SearchTerrMostReports()
         {
+            List<Terrorist> TerrMostReport = new List<Terrorist>();
             int mustReport = AuxiliaryFunTerr.MaxNumberReports();
             foreach (var key in AuxiliaryFunTerr.InitDict())
             {
                 if (key.Value == mustReport)
                 {
-                    key.Key.Print();
-                    System.Console.WriteLine("Number of reports found: " + mustReport);
+                    TerrMostReport.Add(key.Key);
                 }
             }
+            return TerrMostReport;
         }
     }
 }

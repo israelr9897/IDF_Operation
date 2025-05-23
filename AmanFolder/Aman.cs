@@ -55,31 +55,22 @@ namespace IDF_Operation.Models
         //     return ansorted.OrderBy(terroist => terroist.LevelRisk).ToList();
         // }
 
-        internal static List<IntelReport> SearchReportByTerroist(int id)
-        {
-            List<IntelReport> reportLoistByTerroist = new List<IntelReport>();
-            foreach (var report in Aman.ReportList)
-            {
-                if (report.TerroristName.Id == id)
-                {
-                    reportLoistByTerroist.Add(report);
-                }
-            }
-            return reportLoistByTerroist;
-        }
-
-        static public List<IntelReport> SortReportsByDate(List<IntelReport> UnSorted)
-        {
-            return UnSorted.OrderBy(report => report.TimeStamp).ToList();
-        }
-
-        static public void ReportListPrint()
-        {
-            foreach (var report in ReportList)
-            {
-                report.Print();
-            }
-        }
-
+        // internal static List<IntelReport> SearchReportByTerroist(int id)
+        // {
+        //     List<IntelReport> reportLoistByTerroist = new List<IntelReport>();
+        //     foreach (var report in Aman.ReportList)
+        //     {
+        //         if (report.TerroristName.Id == id)
+        //         {
+        //             reportLoistByTerroist.Add(report);
+        //         }
+        //     }
+        //     return reportLoistByTerroist;
+        // }
+        // 
+        // static public List<IntelReport> SortReportsByDate(List<IntelReport> UnSorted)
+        // {
+        //     return UnSorted.OrderBy(report => report.TimeStamp).ToList();
+        // }
     }
 }

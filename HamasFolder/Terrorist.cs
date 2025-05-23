@@ -32,12 +32,12 @@ namespace IDF_Operation.Models
             Status = "dead";
         }
 
-        public void Print()
-        {
-            string weaponsSTR = String.Join(",", Weapons);
-            //foreach (var weapon in Weapons) { weaponsSTR += weapon + " "; };
-            Console.WriteLine($"Terrorist,\nId: {Id}\nName: {Name},\nRank: {Rank},\nStatus: {Status},\nWeapons: {weaponsSTR}.\n");
-        }
+        // public void Print()
+        // {
+        //     string weaponsSTR = String.Join(",", Weapons);
+        //     //foreach (var weapon in Weapons) { weaponsSTR += weapon + " "; };
+        //     Console.WriteLine($"Terrorist,\nId: {Id}\nName: {Name},\nRank: {Rank},\nStatus: {Status},\nWeapons: {weaponsSTR}.\n");
+        // }
 
         private static int ResultWeapons(List<string> weapons)
         {
