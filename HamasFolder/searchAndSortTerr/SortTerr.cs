@@ -17,9 +17,9 @@ namespace IDF_Operation.Models
             }
             return SortedNumberReportsList;
         }
-        internal static List<Terrorist> SortingByRisk(List<Terrorist> ansorted)
+        internal static List<Terrorist> SortingByRisk()
         {
-            return ansorted.OrderBy(terroist => terroist.LevelRisk).ToList();
+            return Hamas.Terrorists.OrderBy(terroist => terroist.LevelRisk).ToList();
         }
     }
 }

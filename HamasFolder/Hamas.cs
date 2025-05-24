@@ -14,13 +14,13 @@ namespace IDF_Operation.Models
         public static List<Terrorist> Terrorists = new List<Terrorist>();
 
 
-        public static void TerroristsListPrint()
-        {
-            foreach (var terroist in Terrorists)
-            {
-                terroist.Print();
-            }
-            // System.Console.WriteLine("YES");
-        }
+        // public static void TerroristsListPrint()
+        // {
+        //     foreach (var terroist in Terrorists)
+        //     {
+        //         terroist.Print();
+        //     }
+        //     // System.Console.WriteLine("YES");
+        // }
     }
 }

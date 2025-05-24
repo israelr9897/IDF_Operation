@@ -2,16 +2,17 @@ namespace IDF_Operation.Models
 {
     static class SearchReports
     {
-        internal static IntelReport SearchReportByTerroist(int terroistId)
+        internal static List<IntelReport> SearchReportByTerroist(int terroistId)
         {
+            List<IntelReport> reports = new List<IntelReport>();
             foreach (var report in Aman.ReportList)
             {
                 if (report.TerroristName.Id == terroistId)
                 {
-                    return report;
+                    reports.Add(report);
                 }
             }
-            return null;
+            return reports;
         }
 
         internal static IntelReport SearchReportById(int reportId)

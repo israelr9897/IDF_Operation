@@ -15,5 +15,16 @@ namespace IDF_Operation.Models
                 terroist.Print();
             }
         }
+        public static void DictPrint(this List<Dictionary<Terrorist, int>> list)
+        {
+            foreach (var dict in list)
+            {
+                foreach (var key in dict)
+                {
+                    key.Key.Print();
+                    System.Console.WriteLine($"Reports number: {key.Value}\n\n");
+                }
+            }
+        }
     }
 }
