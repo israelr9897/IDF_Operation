@@ -12,7 +12,8 @@ namespace IDF_Operation.Models
         {
             foreach (var weaopn in StrikeOptionsList)
             {
-                weaopn.DataPrinting();
+                WeaponsPrint.Print(weaopn);
+                //weaopn.DataPrinting();
                 System.Console.WriteLine("\n\n");
             }
         }

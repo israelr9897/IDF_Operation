@@ -56,8 +56,8 @@ namespace IDF_Operation.Models
         }
         static private void ViewRecentReport()
         {
-            SortReport.SortReportsByDate()[0].TerroristName.Print();
-            Id = SortReport.SortReportsByDate()[0].TerroristName.Id;
+            SortReport.SortReportsByDate(Aman.ReportList)[0].TerroristName.Print();
+            Id = SortReport.SortReportsByDate(Aman.ReportList)[0].TerroristName.Id;
             ViewMustReport();
         }
         static private void ViweReports()

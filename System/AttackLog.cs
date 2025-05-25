@@ -35,7 +35,13 @@ namespace IDF_Operation.Models
 
         public void Printer()
         {
-            Console.WriteLine("");
+            Console.WriteLine($"ID: {LogID},\n" +
+                $"Target: {Target},\n" +
+                $"Time: {AttackTime}\n" +
+                $"Attack Commander: {CommandingOfficer}\n" +
+                $"StrikeOpUsed: {StrikeOpUsed}\n" +
+                $"WeaponUsed: {WeaponUsed}\n" +
+                $"Fuel Used: {FuelInUse}\n");
         }
     }
 }

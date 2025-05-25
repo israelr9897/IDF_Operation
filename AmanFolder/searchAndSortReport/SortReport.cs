@@ -2,9 +2,9 @@ namespace IDF_Operation.Models
 {
     static class SortReport
     {
-        static public List<IntelReport> SortReportsByDate()
+        static public List<IntelReport> SortReportsByDate(List<IntelReport> unSorted)
         {
-            return Aman.ReportList.OrderBy(report => report.TimeStamp).ToList();
+            return unSorted.OrderByDescending(report => report.TimeStamp).ToList();
         }
     }
 }

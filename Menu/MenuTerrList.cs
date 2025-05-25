@@ -5,10 +5,10 @@ namespace IDF_Operation.Models
         static bool Loop = true;
         static Dictionary<int, Action> ChoiceDict = new Dictionary<int, Action>
         {
-            {1, MenuTerrSort.UserChoice},
+            {1,MenuTerrSort.UserChoice},
             {2,MenuSearchTerr.UserChoice},
             {0,MenuTerroists.UserChoice},
-            {00, ToFalse}
+            {00,ToFalse}
         };
 
         static public void UserChoice()
