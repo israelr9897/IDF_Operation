@@ -4,13 +4,15 @@ namespace IDF_Operation.Models
     public abstract class StrikeOptions : IFuelAndAmmunition
     {
         public string Name { get; }
+        public int Id { get; }
         public Dictionary<string, int> AmmunitionAmount;
         public int FuelSupply { get; set; }
         public string TargetType { get; }
 
-        public StrikeOptions(string name, int fuelSupply, string targetType)
+        public StrikeOptions(string name, int id, int fuelSupply, string targetType)
         {
             Name = name;
+            Id = id;
             AmmunitionAmount = AmmunitionRefill();
             FuelSupply = fuelSupply;
             TargetType = targetType;
@@ -32,8 +34,9 @@ namespace IDF_Operation.Models
 
         public void DataPrinting()
         {
-            System.Console.WriteLine($"Type of attack vehicle - {Name}\n" +
-                                    $"Amount of ammunition -\n{DictPrint()}" +
+            System.Console.WriteLine($"ID: {Id}\n" +
+                                    $"Type of attack vehicle - {Name}\n" +
+                                    $"Amount of ammunition -{DictPrint()}\n" +
                                     $"Amount of fuel - {FuelSupply}\n" +
                                     $"Type of targets - {TargetType}");
         }
@@ -43,7 +46,7 @@ namespace IDF_Operation.Models
             string messge = "";
             foreach (var item in AmmunitionAmount)
             {
-                messge += item.Key + " : " + item.Value + "\n";
+                messge += item.Key + " : " + item.Value + "     ";
             }
             return messge;
         }

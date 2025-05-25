@@ -7,6 +7,7 @@ namespace IDF_Operation.Models
     {
         public Zik(int fuelSupply) : base(
                 "Zik 460",
+                Idf.StrikeOptionsList.Count +1,
                 fuelSupply,
                 "people, vehicles")
         { }
