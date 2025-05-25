@@ -31,25 +31,5 @@ namespace IDF_Operation.Models
             AmmunitionAmount[ammunitionType] -= 1;
         }
         public abstract Dictionary<string, int> AmmunitionRefill();
-
-        public void DataPrinting()
-        {
-            System.Console.WriteLine($"ID: {Id}\n" +
-                                    $"Type of attack vehicle - {Name}\n" +
-                                    $"Amount of ammunition -{DictPrint()}\n" +
-                                    $"Amount of fuel - {FuelSupply}\n" +
-                                    $"Type of targets - {TargetType}");
-        }
-
-        public string DictPrint()
-        {
-            string messge = "";
-            foreach (var item in AmmunitionAmount)
-            {
-                messge += item.Key + " : " + item.Value + "     ";
-            }
-            return messge;
-        }
-
     }
 }

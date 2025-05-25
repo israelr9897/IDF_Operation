@@ -17,11 +17,5 @@ namespace IDF_Operation.Models
             this.Location = location;
             this.TimeStamp = timeStamp;
         }
-        public void Print()
-        {
-            //string weaponsSTR = String.Join(",", Weapons);
-            Console.WriteLine($"IntelReport,\nReport Id: {Id}\nTerrorist Name: {TerroristName.Name},\nLocation: {Location},\nTimeStamp: {TimeStamp.ToString("yyyy-MM-ddTHH:mm:ss")}.\n");
-        }
-
     }
 }

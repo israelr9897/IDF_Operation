@@ -11,28 +11,31 @@ namespace IDF_Operation.Models
     {
         private InitTerrorists terrorists;
         private InitReports reports;
+        private InitWeapons weapons;
 
         public Initializer()
         {
-            //Initialize AttackOps
+            // Initialize AttackOps
+            weapons = new InitWeapons(10);
 
             //Initialize IDF officers
 
             //Initialize Hamas Terrorists
             terrorists = new InitTerrorists(10);
-            foreach (Terrorist item in Hamas.Terrorists)
-            {
-                item.Print();
-            }
+
+            // foreach (Terrorist item in Hamas.Terrorists)
+            // {
+            //     item.Print();
+            // }
 
             //Initialize Intel Reports
             reports = new InitReports(10);
-            Aman.ReportList = Aman.SortReportsByDate(Aman.ReportList);
-            Console.WriteLine("Sorted");
-            foreach (IntelReport item in Aman.ReportList)
-            {
-                item.Print();
-            }
+            // Aman.ReportList = SortReport.SortReportsByDate(Aman.ReportList);
+            // Console.WriteLine("Sorted");
+            // foreach (IntelReport item in Aman.ReportList)
+            // {
+            //     item.Print();
+            // }
 
         }
     }
