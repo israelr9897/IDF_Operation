@@ -23,7 +23,7 @@ namespace IDF_Operation.Models
                 for (int i = 0; i < amountReports; i++)
                 {
                     Aman.ReportList.Add(new IntelReport(
-                        Aman.ReportList.Count,
+                        Aman.ReportList.Count +1,
                         t, 
                         LocationTypes[random.Next(3)], 
                         GenerateTimestamp()));

@@ -1,42 +1,42 @@
-﻿using IDF_Operation.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// using IDF_Operation.Models;
+// using System;
+// using System.Collections.Generic;
+// using System.Linq;
+// using System.Text;
+// using System.Threading.Tasks;
 
-namespace IDF_Operation.Models
-{
-    internal class Initializer
-    {
-        private InitTerrorists terrorists;
-        private InitReports reports;
+// namespace IDF_Operation.Models
+// {
+//     internal class Initializer
+//     {
+//         private InitTerrorists terrorists;
+//         private InitReports reports;
 
-        public Initializer()
-        {
-            //Initialize AttackOps
+//         public Initializer()
+//         {
+//             //Initialize AttackOps
 
-            //Initialize IDF officers
+//             //Initialize IDF officers
 
-            //Initialize Hamas Terrorists
-            terrorists = new InitTerrorists(10);
-            foreach (Terrorist item in Hamas.Terrorists)
-            {
-                item.Print();
-            }
+//             //Initialize Hamas Terrorists
+//             terrorists = new InitTerrorists(10);
+//             foreach (Terrorist item in Hamas.Terrorists)
+//             {
+//                 item.Print();
+//             }
 
-            //Initialize Intel Reports
-            reports = new InitReports(10);
-            Aman.ReportList = Aman.SortReportsByDate(Aman.ReportList);
-            Console.WriteLine("Sorted");
-            foreach (IntelReport item in Aman.ReportList)
-            {
-                item.Print();
-            }
+//             //Initialize Intel Reports
+//             reports = new InitReports(10);
+//             Aman.ReportList = SortReport.SortReportsByDate(Aman.ReportList);
+//             Console.WriteLine("Sorted");
+//             foreach (IntelReport item in Aman.ReportList)
+//             {
+//                 item.Print();
+//             }
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
 
