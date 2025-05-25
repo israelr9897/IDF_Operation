@@ -7,17 +7,13 @@ namespace IDF_Operation.Models
         static int Id;
         static Dictionary<int, Action[]> ChoiceDict = new Dictionary<int, Action[]>
         {
-            {1, new Action[]{MenuTerrList.MenuPrint} },
-            {2, new Action[]{ViweMustDenger,MiniMenuPrint,MenuPrint } },
-            {3, new Action[]{ViewMustReport,MiniMenuPrint,MenuPrint}},
-            {4, new Action[]{ViewRecentReport,MiniMenuPrint,MenuPrint}},
-            {11, new Action[]{Menu.MenuPrint } },
+            {1, new Action[]{ViweTerrList,MenuTerrList.MenuPrint } },
+            {2, new Action[]{ViweMustDenger,SubMenu.MiniMenuPrint,MenuPrint } },
+            {3, new Action[]{ViewMustReport,SubMenu.MiniMenuPrint,MenuPrint}},
+            {4, new Action[]{ViewRecentReport,SubMenu.MiniMenuPrint,MenuPrint}},
+            {9, new Action[]{Menu.MenuPrint } },
         };
-        static Dictionary<int, Action[]> MiniChoiceDict = new Dictionary<int, Action[]>
-        {
-            {1, new Action[]{ViweReports,MiniMenuPrint}},
-            {11, new Action[] {MenuPrint}},
-        };
+        
 
         static MenuTerroists()
         {
@@ -31,24 +27,15 @@ namespace IDF_Operation.Models
                                     "2.  Show the most dangerous terrorist\n" +
                                     "3.  Show the terrorist with the most reports\n" +
                                     "4.  Show the terrorist with the most recent report\n" +
-                                    "11. Return to the main menu.\n" +
-                                    "00. Exit");
+                                    "9.  Return to the main menu.\n" +
+                                    "99. Exit");
             UserChoice(ChoiceDict);
         }
-        static public void MiniMenuPrint()
-        {
-            System.Console.WriteLine($"Please select the desired option -\n" +
-                                    "1.  To view the terrorist reports\n" +
-                                    "11. Return to the main menu.\n" +
-                                    "00. Exit");
-            UserChoice(MiniChoiceDict);
-        }
-
 
         static public void UserChoice(Dictionary<int, Action[]> dict)
         {
             int choice = int.Parse(Console.ReadLine());
-            if (choice == 00)
+            if (choice == 99)
             {
                 Environment.Exit(0);
             }
@@ -60,6 +47,11 @@ namespace IDF_Operation.Models
                 }
             }
 
+        }
+
+        static void ViweTerrList()
+        {
+            Hamas.Terrorists.Print();
         }
 
         static private void ViweMustDenger()
@@ -77,10 +69,6 @@ namespace IDF_Operation.Models
         {
             SortReport.SortReportsByDate().Print();
             Id = SortReport.SortReportsByDate()[0].TerroristName.Id;
-        }
-        static internal void ViweReports()
-        {
-            SearchReports.SearchReportByTerroist(Id).Print();
         }
     }
 }

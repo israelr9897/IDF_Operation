@@ -2,11 +2,11 @@ namespace IDF_Operation.Models
 {
     static class MenuTerrSort
     {
-        static Dictionary<int, Action> ChoiceDict = new Dictionary<int, Action>
+        static Dictionary<int, Action[]> ChoiceDict = new Dictionary<int, Action[]>
         {
-            {1, SortTerroist.SortingByRisk().Print},
-            {2, SortTerroist.SortedNumberReports().Print},
-            {11, MenuTerrList.MenuPrint},
+            {1, new Action[] {SortTerroist.SortingByRisk().Print, SubMenu.MiniMenuPrint} },
+            {2, new Action[] {SortTerroist.SortedNumberReports().Print, SubMenu.MiniMenuPrint} },
+            {9, new Action[] {MenuPrint} },
         };
 
         static public void MenuPrint()
@@ -22,14 +22,17 @@ namespace IDF_Operation.Models
 
         static public void UserChoice()
         {
-            int Choice = int.Parse(Console.ReadLine());
-            if (Choice == 00)
+            int choice = int.Parse(Console.ReadLine());
+            if (choice == 99)
             {
                 Environment.Exit(0);
             }
-            if (ChoiceDict.TryGetValue(Choice, out Action action))
+            if (ChoiceDict.TryGetValue(choice, out Action[] action))
             {
-                action();
+                foreach (var item in action)
+                {
+                    item();
+                }
             }
         }
     }

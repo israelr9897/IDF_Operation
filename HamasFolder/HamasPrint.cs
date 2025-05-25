@@ -6,7 +6,7 @@ namespace IDF_Operation.Models
         {
             string weaponsSTR = String.Join(",", obj.Weapons);
             //foreach (var weapon in Weapons) { weaponsSTR += weapon + " "; };
-            Console.WriteLine($"Terrorist,\nId: {obj.Id}\nName: {obj.Name},\nRank: {obj.Rank},\nStatus: {obj.Status},\nWeapons: {weaponsSTR}.\n");
+            Console.WriteLine($"Terrorist,\nId: {obj.Id}\nName: {obj.Name},\nRank: {obj.Rank},\nLevel risk: {obj.LevelRisk}\nStatus: {obj.Status},\nWeapons: {weaponsSTR}.\n");
         }
         public static void Print(this List<Terrorist> list)
         {

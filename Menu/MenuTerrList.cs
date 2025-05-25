@@ -6,13 +6,8 @@ namespace IDF_Operation.Models
         {
             {1, MenuTerrSort.MenuPrint},
             {2, MenuSearchTerr.MenuPrint},
-            {11,MenuTerroists.MenuPrint},
+            {9,MenuTerroists.MenuPrint},
         };
-
-        static MenuTerrList()
-        {
-            Hamas.Terrorists.Print();
-        }
 
         static public void MenuPrint()
         {

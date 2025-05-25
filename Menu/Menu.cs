@@ -24,14 +24,14 @@ namespace IDF_Operation.Models
                                       "3.  Reports\n" +
                                       "4.  System recommendation for attack\n" +
                                       "5.  Attack\n" +
-                                      "00. Exit");
+                                      "99. Exit");
             UserChoice();
         }
 
         static public void UserChoice()
         {
             int Choice = int.Parse(Console.ReadLine());
-            if (Choice == 00)
+            if (Choice == 99)
             {
                 Environment.Exit(0);
             }
