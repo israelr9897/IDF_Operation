@@ -7,7 +7,7 @@ namespace IDF_Operation.Models
             //string weaponsSTR = String.Join(",", Weapons);
             Console.WriteLine($"Report Id: {obj.Id}\nTerrorist Name: {obj.TerroristName.Name},\nLocation: {obj.Location},\nTimeStamp: {obj.TimeStamp.ToString("yyyy-MM-ddTHH:mm:ss")}.\n");
         }
-        public static void ListPrint(this List<IntelReport> list)
+        public static void Print(this List<IntelReport> list)
         {
             foreach (var report in list)
             {

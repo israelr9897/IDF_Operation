@@ -10,7 +10,7 @@ namespace IDF_Operation.Models
                                     $"Amount of fuel - {obj.FuelSupply}\n" +
                                     $"Type of targets - {obj.TargetType}\n");
         }
-        public static void ListPrint(this List<StrikeOptions> list)
+        public static void Print(this List<StrikeOptions> list)
         {
             foreach (var weapon in list)
             {
@@ -18,7 +18,7 @@ namespace IDF_Operation.Models
             }
         }
 
-        public static string DictPrint(this StrikeOptions obj)
+        private static string DictPrint(this StrikeOptions obj)
         {
             string amount = "";
             foreach (var item in obj.AmmunitionAmount)

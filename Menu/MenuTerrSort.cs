@@ -5,8 +5,8 @@ namespace IDF_Operation.Models
         static bool Loop = true;
         static Dictionary<int, Action> ChoiceDict = new Dictionary<int, Action>
         {
-            {1, SortTerroist.SortingByRisk().ListPrint},
-            {2,SortTerroist.SortedNumberReports().DictPrint},
+            {1, SortTerroist.SortingByRisk().Print},
+            {2,SortTerroist.SortedNumberReports().Print},
             {0,MenuTerroists.UserChoice},
             {00, ToFalse}
         };

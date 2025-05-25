@@ -10,6 +10,7 @@ namespace IDF_Operation.Models
             InitReports v = new InitReports(5);
             InitWeapons w = new InitWeapons(2);
             MenuTerroists.UserChoice();
+            
         }
     }
 }

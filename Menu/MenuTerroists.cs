@@ -10,7 +10,7 @@ namespace IDF_Operation.Models
             {2, ViweMustDenger},
             {3, ViewMustReport},
             {4, ViewRecentReport},
-            // {0,},
+            // {0, UserChoice},
             {00, ToFalse}
         };
 
@@ -33,7 +33,7 @@ namespace IDF_Operation.Models
                 action();
                 if (Loop)
                 {
-                    MenuTerroists.UserChoice();
+                    UserChoice();
                 }
 
             }
@@ -42,7 +42,7 @@ namespace IDF_Operation.Models
 
         static private void ViweMustDenger()
         {
-            SearchTerroist.SearchTerrMostDanger().ListPrint();
+            SearchTerroist.SearchTerrMostDanger().Print();
             Id = SearchTerroist.SearchTerrMostDanger()[0].Id;
             ViweReports();
 
@@ -50,9 +50,9 @@ namespace IDF_Operation.Models
 
         static private void ViewMustReport()
         {
-            SearchTerroist.SearchTerrMostReports().ListPrint();
+            SearchTerroist.SearchTerrMostReports().Print();
             Id = SearchTerroist.SearchTerrMostReports()[0].Id;
-            ViewMustReport();
+            ViweReports();
         }
         static private void ViewRecentReport()
         {
@@ -62,7 +62,7 @@ namespace IDF_Operation.Models
         }
         static private void ViweReports()
         {
-            SearchReports.SearchReportByTerroist(Id).ListPrint();
+            SearchReports.SearchReportByTerroist(Id).Print();
             System.Console.WriteLine($"Please select the desired option -\n" +
                                     "0. Return to the main menu.\n" +
                                     "00. Exit");

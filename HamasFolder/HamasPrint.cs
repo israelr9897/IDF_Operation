@@ -8,14 +8,14 @@ namespace IDF_Operation.Models
             //foreach (var weapon in Weapons) { weaponsSTR += weapon + " "; };
             Console.WriteLine($"Terrorist,\nId: {obj.Id}\nName: {obj.Name},\nRank: {obj.Rank},\nStatus: {obj.Status},\nWeapons: {weaponsSTR}.\n");
         }
-        public static void ListPrint(this List<Terrorist> list)
+        public static void Print(this List<Terrorist> list)
         {
             foreach (var terroist in list)
             {
                 terroist.Print();
             }
         }
-        public static void DictPrint(this List<Dictionary<Terrorist, int>> list)
+        public static void Print(this List<Dictionary<Terrorist, int>> list)
         {
             foreach (var dict in list)
             {
