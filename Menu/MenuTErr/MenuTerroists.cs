@@ -7,18 +7,12 @@ namespace IDF_Operation.Models
         static int Id;
         static Dictionary<int, Action[]> ChoiceDict = new Dictionary<int, Action[]>
         {
-            {1, new Action[]{ViweTerrList,MenuTerrList.MenuPrint } },
-            {2, new Action[]{ViweMustDenger,SubMenu.MiniMenuPrint,MenuPrint } },
-            {3, new Action[]{ViewMustReport,SubMenu.MiniMenuPrint,MenuPrint}},
-            {4, new Action[]{ViewRecentReport,SubMenu.MiniMenuPrint,MenuPrint}},
+            {1, new Action[]{Hamas.Terrorists.Print,MenuTerrList.MenuPrint } },
+            {2, new Action[]{ViweMustDenger,SubMenu.MiniReportMenuPrint,MenuPrint } },
+            {3, new Action[]{ViewMustReport,SubMenu.MiniReportMenuPrint,MenuPrint}},
+            {4, new Action[]{ViewRecentReport,SubMenu.MiniReportMenuPrint,MenuPrint}},
             {9, new Action[]{Menu.MenuPrint } },
         };
-        
-
-        static MenuTerroists()
-        {
-            MenuPrint();
-        }
 
         static public void MenuPrint()
         {
@@ -29,30 +23,25 @@ namespace IDF_Operation.Models
                                     "4.  Show the terrorist with the most recent report\n" +
                                     "9.  Return to the main menu.\n" +
                                     "99. Exit");
-            UserChoice(ChoiceDict);
+            UserChoiceCheck.UserChoice(ChoiceDict);
         }
 
-        static public void UserChoice(Dictionary<int, Action[]> dict)
-        {
-            int choice = int.Parse(Console.ReadLine());
-            if (choice == 99)
-            {
-                Environment.Exit(0);
-            }
-            if (dict.TryGetValue(choice, out Action[] action))
-            {
-                foreach (var item in action)
-                {
-                    item();
-                }
-            }
+        // static public void UserChoice(Dictionary<int, Action[]> dict)
+        // {
+        //     int choice = int.Parse(Console.ReadLine());
+        //     if (choice == 99)
+        //     {
+        //         Environment.Exit(0);
+        //     }
+        //     if (dict.TryGetValue(choice, out Action[] action))
+        //     {
+        //         foreach (var item in action)
+        //         {
+        //             item();
+        //         }
+        //     }
 
-        }
-
-        static void ViweTerrList()
-        {
-            Hamas.Terrorists.Print();
-        }
+        // }
 
         static private void ViweMustDenger()
         {
