@@ -4,8 +4,8 @@ namespace IDF_Operation.Models
     {
         static Dictionary<int, Action[]> ChoiceDict = new Dictionary<int, Action[]>
         {
-            {1, new Action[] {SortTerroist.SortingByRisk().Print, SubMenu.MiniMenuPrint} },
-            {2, new Action[] {SortTerroist.SortedNumberReports().Print, SubMenu.MiniMenuPrint} },
+            {1, new Action[] {SortTerroist.SortingByRisk().Print, SubMenu.MiniReportMenuPrint} },
+            {2, new Action[] {SortTerroist.SortedNumberReports().Print, SubMenu.MiniReportMenuPrint} },
             {9, new Action[] {MenuPrint} },
         };
 
