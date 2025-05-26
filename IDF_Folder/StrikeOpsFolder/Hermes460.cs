@@ -9,7 +9,7 @@ namespace IDF_Operation.Models
                 "Zik 460",
                 Idf.StrikeOptionsList.Count +1,
                 fuelSupply,
-                "people, vehicles")
+                "outside , car")
         { }
 
         public override Dictionary<string, int> AmmunitionRefill()

@@ -18,7 +18,7 @@ namespace IDF_Operation.Models
             }
         }
 
-        private static string DictPrint(this StrikeOptions obj)
+        internal static string DictPrint(this StrikeOptions obj)
         {
             string amount = "";
             foreach (var item in obj.AmmunitionAmount)

@@ -6,9 +6,8 @@ namespace IDF_Operation.Models
     {
         static void Main(string[] args)
         {
-            Initializer init = new Initializer();
-            Menu.MenuPrint(); 
-            // SortReport.SortReportsByDate().Print();
+            // Initializer init = new Initializer();
+            // Menu.MenuPrint(); 
         }
     }
 }

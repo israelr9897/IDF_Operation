@@ -10,7 +10,7 @@ namespace IDF_Operation.Models
                 "F16",
                 Idf.StrikeOptionsList.Count +1,
                 fuelSupply,
-                "Buildings")
+                "home")
         {
             PilotName = pilotName;
         }
