@@ -1,39 +1,44 @@
 namespace IDF_Operation.Models
 {
-    internal static class MenuTerrList 
+    internal static class MenuTerrList
     {
-        static bool Loop = true;
-        static Dictionary<int, Action> ChoiceDict = new Dictionary<int, Action>
+        static Dictionary<int, Action[]> ChoiceDict = new Dictionary<int, Action[]>
         {
-            {1,MenuTerrSort.UserChoice},
-            {2,MenuSearchTerr.UserChoice},
-            {0,MenuTerroists.UserChoice},
-            {00,ToFalse}
+            {1, new Action[]{MenuTerrSort.MenuPrint} },
+            {2, new Action[]{SearchTerr} },
+            {9, new Action[]{MenuTerroists.MenuPrint} }
         };
 
-        static public void UserChoice()
+
+        static public void MenuPrint()
         {
             System.Console.WriteLine($"Please select the desired option -\n" +
-                                    "1. Sort \n" +
-                                    "2. Search terrorist by ID\n" +
-                                    "0. Return to the back menu.\n" +
-                                    "00. To Exit");
-            int Choice = int.Parse(Console.ReadLine());
-            if (ChoiceDict.TryGetValue(Choice, out Action action))
-            {
-                action();
-                if (Loop)
-                {
-                    MenuTerroists.UserChoice();
-                }
-
-            }
-
+                                    "1.  Sort \n" +
+                                    "2.  Search terrorist by ID\n" +
+                                    "9.  Return to the back menu.\n" +
+                                    "99. To Exit");
+            UserChoiceCheck.UserChoice(ChoiceDict);
         }
 
-        static private void ToFalse()
+        // static public void UserChoice()
+        // {
+        //     int Choice = int.Parse(Console.ReadLine());
+        //     if (Choice == 99)
+        //     {
+        //         Environment.Exit(0);
+        //     }
+        //     if (ChoiceDict.TryGetValue(Choice, out Action action))
+        //     {
+        //         action();
+        //     }
+        // }
+
+        static void SearchTerr()
         {
-            Loop = false;
+            System.Console.WriteLine("Please enter the terrorist's ID ");
+            int Id = int.Parse(Console.ReadLine());
+            SearchTerroist.SearchTerroistById(Id).Print();
+            SubMenu.MiniReportMenuPrint();
         }
     }
 }
