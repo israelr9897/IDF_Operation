@@ -19,7 +19,7 @@ namespace IDF_Operation.Models
         {
             foreach (Terrorist t in Hamas.Terrorists)
             {
-                int amountReports = random.Next(amount);
+                int amountReports = random.Next(1,amount);
                 for (int i = 0; i < amountReports; i++)
                 {
                     Aman.ReportList.Add(new IntelReport(
