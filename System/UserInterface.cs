@@ -12,20 +12,12 @@ namespace IDF_Operation.Models
     {
 
 
-        public void AttackCase(Terrorist target, StrikeOptions strikeOp, string ammuType,string officer, IntelReport report)
+        private void AttackCase(Terrorist target, StrikeOptions strikeOp, string ammuType,string officer)
         {
             Random random = new Random();
             int FuelInUse = random.Next(5, 20);
             AttackExe.Attack(target, strikeOp, ammuType, FuelInUse);
-            ListOfAttacks.list.Add(new AttackLog(ListOfAttacks.Length()+1, target, strikeOp, ammuType, FuelInUse, officer, report));
-        }
-
-       
-
-        //public string StrickOpsCase(StrikeOptions StrickOp)
-        //{
-        //    return "";
-        //}
-
+            ListOfAttacks.list.Add(new AttackLog(ListOfAttacks.Length(), target, strikeOp, ammuType, FuelInUse, officer));
+    }
     }
 }
