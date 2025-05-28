@@ -10,6 +10,26 @@ namespace IDF_Operation.Models
 {
     internal class StrikeOpsOverview
     {
+        public static StrikeOptions StrickOpsCase(string location)
+        {
+            List<StrikeOptions> WeaponList = SearchWeapon.FilterWeaponByTarget(location);
+            int SelectedStrickOp = ChooseStrickOp(WeaponList);
+            return SearchWeapon.SearchWeaponById(SelectedStrickOp);
+        }
+
+        private static int ChooseStrickOp(List<StrikeOptions> WeaponList)
+        {
+            Console.WriteLine("Select Strick Option By entering it's ID: ");
+            WeaponsPrint.Print(WeaponList);
+            int StrickOpID = Convert.ToInt32(Console.ReadLine());
+            return StrickOpID;
+        }
+        public static string AmmoCase(StrikeOptions StrikeOp, string location)
+        {
+            //send srtikeOp to func for user to choose the ammo type
+            string ammoType = AmmutType(StrikeOp, location);
+            return ammoType;
+        }
         public static string AmmutType(StrikeOptions Type, string location)
         {
             string ammuType = "";
@@ -37,5 +57,8 @@ namespace IDF_Operation.Models
             }
             return ammuType;
         }
+
+
+
     }
 }

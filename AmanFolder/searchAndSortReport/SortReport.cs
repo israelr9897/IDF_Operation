@@ -4,7 +4,7 @@ namespace IDF_Operation.Models
     {
         static public List<IntelReport> SortReportsByDate()
         {
-            return Aman.ReportList.OrderBy(report => report.TimeStamp).ToList();
+            return Aman.ReportList.OrderByDescending(report => report.TimeStamp).ToList();
         }
     }
 }

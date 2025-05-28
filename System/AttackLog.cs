@@ -16,6 +16,8 @@ namespace IDF_Operation.Models
         public static String WeaponUsed;
         public static int FuelInUse;
         public static String CommandingOfficer;
+        public static int IntelReportID;
+
 
         public AttackLog(
             int id,
@@ -23,7 +25,8 @@ namespace IDF_Operation.Models
             StrikeOptions StrikeOp , 
             String Weapon , 
             int Fuel, 
-            String officer)
+            String officer,
+            IntelReport intel)
         {
             LogID = id;
             Target = target;
@@ -31,11 +34,19 @@ namespace IDF_Operation.Models
             WeaponUsed = Weapon;
             FuelInUse = Fuel;
             CommandingOfficer = officer;
+            IntelReportID = intel.Id;
         }
 
-        public void Printer()
+        internal void Printer()
         {
-            Console.WriteLine("");
+            Console.WriteLine($"ID: {LogID},\n" +
+                $"Target: {Target.Name},\n" +
+                $"Time: {AttackTime}\n" +
+                $"Attack Commander: {CommandingOfficer}\n" +
+                $"StrikeOpUsed: {StrikeOpUsed.Name}\n" +
+                $"WeaponUsed: {WeaponUsed}\n" +
+                $"Fuel Used: {FuelInUse}\n" +
+                $"Attack was based on intel report ID: {IntelReportID}\n");
         }
     }
 }

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace IDF_Operation.Models
 {
     static class SearchWeapon
@@ -27,5 +29,17 @@ namespace IDF_Operation.Models
             return filterTargetWeapon;
         }
 
+        public static List<StrikeOptions> SearchStrikeOpsByType(string name)
+        {
+            List<StrikeOptions> list = new List<StrikeOptions>();
+            foreach (StrikeOptions StrikeOp in Idf.StrikeOptionsList)
+            {
+                if (StrikeOp.Name == name)
+                {
+                    list.Add(StrikeOp);
+                }
+            }
+            return list;
+        }
     }
 }

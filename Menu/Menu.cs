@@ -5,7 +5,7 @@ namespace IDF_Operation.Models
         static Dictionary<int, Action[]> ChoiceDict = new Dictionary<int, Action[]>
         {
             {1, new Action[]{MenuTerroists.MenuPrint} },
-            // {2, Men.UserChoice},
+            {2, new Action[]{Idf.StrikeOptionsList.Print} },
             {3, new Action[]{MenuReport.MenuPrint} }
             // {1, MenuTerroists.UserChoice},
             // {1, MenuTerroists.UserChoice},
@@ -27,19 +27,5 @@ namespace IDF_Operation.Models
                                       "99. Exit");
             UserChoiceCheck.UserChoice(ChoiceDict);
         }
-
-        // static public void UserChoice()
-        // {
-        //     int Choice = int.Parse(Console.ReadLine());
-        //     if (Choice == 99)
-        //     {
-        //         Environment.Exit(0);
-        //     }
-        //     if (ChoiceDict.TryGetValue(Choice, out Action action))
-        //     {
-        //         action();
-        //     }
-
-        // }
     }
 }
