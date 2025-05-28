@@ -9,7 +9,7 @@ namespace IDF_Operation.Models
                 "M109",
                 Idf.StrikeOptionsList.Count +1,
                 fuelSupply,
-                "open areas")
+                "outside")
         { }
         
         public override Dictionary<string, int> AmmunitionRefill()

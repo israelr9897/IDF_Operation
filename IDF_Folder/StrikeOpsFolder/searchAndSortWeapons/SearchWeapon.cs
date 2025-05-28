@@ -15,6 +15,20 @@ namespace IDF_Operation.Models
             }
             return null;
         }
+
+        public static List<StrikeOptions> FilterWeaponByTarget(string target)
+        {
+            List<StrikeOptions> filterTargetWeapon = new List<StrikeOptions>();
+            foreach (var weapon in Idf.StrikeOptionsList)
+            {
+                if (weapon.TargetType.Contains(target))
+                {
+                    filterTargetWeapon.Add(weapon);
+                }
+            }
+            return filterTargetWeapon;
+        }
+
         public static List<StrikeOptions> SearchStrikeOpsByType(string name)
         {
             List<StrikeOptions> list = new List<StrikeOptions>();

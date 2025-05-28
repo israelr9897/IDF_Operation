@@ -25,24 +25,6 @@ namespace IDF_Operation.Models
                                     "99. Exit");
             UserChoiceCheck.UserChoice(ChoiceDict);
         }
-
-        // static public void UserChoice(Dictionary<int, Action[]> dict)
-        // {
-        //     int choice = int.Parse(Console.ReadLine());
-        //     if (choice == 99)
-        //     {
-        //         Environment.Exit(0);
-        //     }
-        //     if (dict.TryGetValue(choice, out Action[] action))
-        //     {
-        //         foreach (var item in action)
-        //         {
-        //             item();
-        //         }
-        //     }
-
-        // }
-
         static private void ViweMustDenger()
         {
             SearchTerroist.SearchTerrMostDanger().Print();
@@ -56,7 +38,8 @@ namespace IDF_Operation.Models
         }
         static private void ViewRecentReport()
         {
-            SortReport.SortReportsByDate().Print();
+            Terrorist terroist = SortReport.SortReportsByDate()[0].TerroristName;
+            terroist.Print();
             Id = SortReport.SortReportsByDate()[0].TerroristName.Id;
         }
     }

@@ -26,15 +26,10 @@ namespace IDF_Operation.Models
 
             //Initialize Intel Reports
             reports = new InitReports(10);
-            Aman.ReportList = SortReport.SortReportsByDate(Aman.ReportList);
+            Aman.ReportList = SortReport.SortReportsByDate();
         }
     }
 }
-
-        }
-    }
-}
-
 
 
 

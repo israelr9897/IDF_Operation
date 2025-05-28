@@ -10,12 +10,16 @@ namespace IDF_Operation.Models
 {
     internal class UserInterface
     {
-        private void AttackCase(StrikeOptions strikeOp, string ammuType,string officer, IntelReport intel)
+        internal static void AttackCase(string officer, IntelReport intel)
         {
             Random random = new Random();
             int FuelInUse = random.Next(5, 20);
+            StrikeOptions strikeOp = StrikeOpsOverview.StrickOpsCase(intel.Location);
+            string ammuType = StrikeOpsOverview.AmmoCase(strikeOp, intel.Location);
             AttackExe.Attack(intel.TerroristName, strikeOp, ammuType, FuelInUse);
-            ListOfAttacks.list.Add(new AttackLog(ListOfAttacks.Length(), intel.TerroristName, strikeOp, ammuType, FuelInUse, officer, intel));
+            AttackLog atteckReport = new AttackLog(ListOfAttacks.Length()+1, intel.TerroristName, strikeOp, ammuType, FuelInUse, officer, intel);
+            atteckReport.Printer();
+            ListOfAttacks.list.Add(atteckReport);
     }
     }
 }

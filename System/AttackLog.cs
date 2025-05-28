@@ -37,13 +37,13 @@ namespace IDF_Operation.Models
             IntelReportID = intel.Id;
         }
 
-        public void Printer()
+        internal void Printer()
         {
             Console.WriteLine($"ID: {LogID},\n" +
-                $"Target: {Target},\n" +
+                $"Target: {Target.Name},\n" +
                 $"Time: {AttackTime}\n" +
                 $"Attack Commander: {CommandingOfficer}\n" +
-                $"StrikeOpUsed: {StrikeOpUsed}\n" +
+                $"StrikeOpUsed: {StrikeOpUsed.Name}\n" +
                 $"WeaponUsed: {WeaponUsed}\n" +
                 $"Fuel Used: {FuelInUse}\n" +
                 $"Attack was based on intel report ID: {IntelReportID}\n");
