@@ -14,8 +14,8 @@ namespace IDF_Operation.Models
             System.Console.WriteLine($"Please select the desired option -\n" +
                                     "1.  Sort by risk\n" +
                                     "2.  Sort by most reports \n" +
-                                    "11. Return to the back menu.\n" +
-                                    "00. To Exit");
+                                    "9. Return to the back menu.\n" +
+                                    "99. To Exit");
             UserChoice();
         }
 

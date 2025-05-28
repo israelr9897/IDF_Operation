@@ -2,7 +2,7 @@ namespace IDF_Operation.Models
 {
     static class WeaponsPrint
     {
-        public static void Print(this StrikeOptions obj)
+        internal static void Print(this StrikeOptions obj)
         {
             System.Console.WriteLine($"ID: {obj.Id}\n" +
                                     $"Type of attack vehicle - {obj.Name}\n" +
@@ -10,7 +10,7 @@ namespace IDF_Operation.Models
                                     $"Amount of fuel - {obj.FuelSupply}\n" +
                                     $"Type of targets - {obj.TargetType}\n");
         }
-        public static void Print(this List<StrikeOptions> list)
+        internal static void Print(this List<StrikeOptions> list)
         {
             foreach (var weapon in list)
             {
