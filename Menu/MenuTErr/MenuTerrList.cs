@@ -12,30 +12,18 @@ namespace IDF_Operation.Models
 
         static public void MenuPrint()
         {
-            System.Console.WriteLine($"Please select the desired option -\n" +
+            System.Console.WriteLine($"\n\nPlease select the desired option -\n" +
+                                    "--------------\n" +
                                     "1.  Sort \n" +
                                     "2.  Search terrorist by ID\n" +
                                     "9.  Return to the back menu.\n" +
-                                    "99. To Exit");
+                                    "99. To Exit\n" +
+                                    "--------------\n");
             UserChoiceCheck.UserChoice(ChoiceDict);
         }
-
-        // static public void UserChoice()
-        // {
-        //     int Choice = int.Parse(Console.ReadLine());
-        //     if (Choice == 99)
-        //     {
-        //         Environment.Exit(0);
-        //     }
-        //     if (ChoiceDict.TryGetValue(Choice, out Action action))
-        //     {
-        //         action();
-        //     }
-        // }
-
         static void SearchTerr()
         {
-            System.Console.WriteLine("Please enter the terrorist's ID ");
+            System.Console.WriteLine("\n\nPlease enter the terrorist's ID ");
             int Id = int.Parse(Console.ReadLine());
             SearchTerroist.SearchTerroistById(Id).Print();
             SubMenu.MiniReportMenuPrint();

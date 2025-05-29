@@ -12,10 +12,12 @@ namespace IDF_Operation.Models
         static public void MenuPrint()
         {
             System.Console.WriteLine($"Please select the desired option -\n" +
+                                    "--------------\n" +
                                     "1.  Sort by Date \n" +
                                     "2.  Search for a report by ID\n" +
                                     "9.  Return to the back menu.\n" +
-                                    "99. To Exit");
+                                    "99. To Exit" +
+                                    "--------------\n");
             UserChoiceCheck.UserChoice(AmanListDict);
         }
 

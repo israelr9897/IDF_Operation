@@ -9,23 +9,22 @@ namespace IDF_Operation.Models
 {
     internal class AttackLog
     {
-        public static int LogID;
-        public static DateTime AttackTime = DateTime.Today;
-        public static Terrorist Target;
-        public static StrikeOptions StrikeOpUsed;
-        public static String WeaponUsed;
-        public static int FuelInUse;
-        public static String CommandingOfficer;
-        public static int IntelReportID;
-
+        public int LogID;
+        public DateTime AttackTime = DateTime.Today;
+        public Terrorist Target;
+        public StrikeOptions StrikeOpUsed;
+        public string WeaponUsed;
+        public int FuelInUse;
+        public string CommandingOfficer;
+        public int IntelReportID;
 
         public AttackLog(
             int id,
-            Terrorist target, 
-            StrikeOptions StrikeOp , 
-            String Weapon , 
-            int Fuel, 
-            String officer,
+            Terrorist target,
+            StrikeOptions StrikeOp,
+            string Weapon,
+            int Fuel,
+            string officer,
             IntelReport intel)
         {
             LogID = id;
@@ -37,16 +36,27 @@ namespace IDF_Operation.Models
             IntelReportID = intel.Id;
         }
 
-        internal void Printer()
-        {
-            Console.WriteLine($"ID: {LogID},\n" +
-                $"Target: {Target.Name},\n" +
-                $"Time: {AttackTime}\n" +
-                $"Attack Commander: {CommandingOfficer}\n" +
-                $"StrikeOpUsed: {StrikeOpUsed.Name}\n" +
-                $"WeaponUsed: {WeaponUsed}\n" +
-                $"Fuel Used: {FuelInUse}\n" +
-                $"Attack was based on intel report ID: {IntelReportID}\n");
-        }
+        // internal void Printer()
+        // {
+        //     Console.WriteLine("\n\nAttack Report -\n" +
+        //         "--------------\n" +
+        //         $"ID: {LogID},\n" +
+        //         $"Target: {Target.Name},\n" +
+        //         $"Time: {AttackTime}\n" +
+        //         $"Attack Commander: {CommandingOfficer}\n" +
+        //         $"StrikeOpUsed: {StrikeOpUsed.Name}\n" +
+        //         $"WeaponUsed: {WeaponUsed}\n" +
+        //         $"Fuel Used: {FuelInUse}\n" +
+        //         $"Attack was based on intel report ID: {IntelReportID}\n" +
+        //         "--------------\n");
+        // }
+
+        // internal static void Print(List<AttackLog> list)
+        // {
+        //     foreach (var AttackLog in list)
+        //     {
+        //         AttackLog.Printer();
+        //     }
+        // }
     }
 }

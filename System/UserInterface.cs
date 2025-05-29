@@ -17,9 +17,10 @@ namespace IDF_Operation.Models
             StrikeOptions strikeOp = StrikeOpsOverview.StrickOpsCase(intel.Location);
             string ammuType = StrikeOpsOverview.AmmoCase(strikeOp, intel.Location);
             AttackExe.Attack(intel.TerroristName, strikeOp, ammuType, FuelInUse);
-            AttackLog atteckReport = new AttackLog(ListOfAttacks.Length()+1, intel.TerroristName, strikeOp, ammuType, FuelInUse, officer, intel);
-            atteckReport.Printer();
-            ListOfAttacks.list.Add(atteckReport);
+            AttackLog atteckReport = new AttackLog(Idf.Length()+1, intel.TerroristName, strikeOp, ammuType, FuelInUse, officer, intel);
+            System.Console.WriteLine("\n\nThe attack was successful!");
+            atteckReport.Print();
+            Idf.AttackLogList.Add(atteckReport);
     }
     }
 }
