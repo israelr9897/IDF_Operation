@@ -17,30 +17,32 @@ namespace IDF_Operation.Models
         static public void MenuPrint()
         {
             System.Console.WriteLine($"Please select the desired option -\n" +
+                                    "--------------\n" +
                                     "1.  Show the list of terrorists\n" +
                                     "2.  Show the most dangerous terrorist\n" +
                                     "3.  Show the terrorist with the most reports\n" +
                                     "4.  Show the terrorist with the most recent report\n" +
                                     "9.  Return to the main menu.\n" +
-                                    "99. Exit");
+                                    "99. Exit\n" +
+                                    "--------------\n");
             UserChoiceCheck.UserChoice(ChoiceDict);
         }
         static private void ViweMustDenger()
         {
             SearchTerroist.SearchTerrMostDanger().Print();
-            Id = SearchTerroist.SearchTerrMostDanger()[0].Id;
+            // Id = SearchTerroist.SearchTerrMostDanger()[0].Id;
         }
 
         static private void ViewMustReport()
         {
             SearchTerroist.SearchTerrMostReports().Print();
-            Id = SearchTerroist.SearchTerrMostReports()[0].Id;
+            // Id = SearchTerroist.SearchTerrMostReports()[0].Id;
         }
         static private void ViewRecentReport()
         {
             Terrorist terroist = SortReport.SortReportsByDate()[0].TerroristName;
             terroist.Print();
-            Id = SortReport.SortReportsByDate()[0].TerroristName.Id;
+            // Id = SortReport.SortReportsByDate()[0].TerroristName.Id;
         }
     }
 }

@@ -27,6 +27,5 @@ namespace IDF_Operation.Models
             }
             return amount;
         }
-
     }
 }

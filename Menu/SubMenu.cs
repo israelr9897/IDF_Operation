@@ -20,19 +20,23 @@ namespace IDF_Operation.Models
 
         static public void MiniReportMenuPrint()
         {
-            System.Console.WriteLine($"Please select the desired option -\n" +
+            System.Console.WriteLine($"\n\nPlease select the desired option -\n" +
+                                    "--------------\n" +
                                     "1.   To view the terrorist reports\n" +
                                     "9.   Return to the main menu.\n" +
                                     "100. To carry out an attack\n" +
-                                    "99.  Exit");
+                                    "99.  Exit\n" +
+                                    "--------------\n");
             UserChoiceCheck.UserChoice(MiniReportChoiceDict);
         }
         static public void MiniTerrMenuPrint()
         {
-            System.Console.WriteLine($"Please select the desired option -\n" +
+            System.Console.WriteLine($"\n\nPlease select the desired option -\n" +
+                                    "--------------\n" +
                                     "1.  To view the terrorist in the report\n" +
                                     "9.  Return to the main menu.\n" +
-                                    "99. Exit");
+                                    "99. Exit\n" +
+                                    "--------------\n");
             UserChoiceCheck.UserChoice(MiniTerrChoiceDict);
         }
 
@@ -48,16 +52,16 @@ namespace IDF_Operation.Models
 
         static void ChoiceTerroist()
         {
-            System.Console.WriteLine("Enter terroist's the Id");
+            System.Console.WriteLine("\n\nEnter terroist's the Id");
             TerrId = int.Parse(Console.ReadLine());
         }
-        static void ChoiceReport()
+        static public void ChoiceReport()
         {
-            System.Console.WriteLine("Enter report's the Id");
+            System.Console.WriteLine("\n\nEnter report's the Id");
             ReportId = int.Parse(Console.ReadLine());
         }
 
-        static void StartAttack()
+        static public void StartAttack()
         {
             IntelReport report = SearchReports.SearchReportById(ReportId);
             if (CheckIsAlive(report))
@@ -66,7 +70,7 @@ namespace IDF_Operation.Models
             }
             else
             {
-                System.Console.WriteLine("The terrorist you selected is dead!!\n" +
+                System.Console.WriteLine("\n\nThe terrorist you selected is dead!!\n" +
                                         "Please enter a report of another terrorist.");
                 MiniReportMenuPrint();
 
